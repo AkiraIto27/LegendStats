@@ -69,19 +69,19 @@ const Footer: React.FC = () => {
 
         <FooterSection>
           <FooterTitle>メニュー</FooterTitle>
-          <Link href="/" passHref>
+          <Link href="/">
             <FooterLink>ホーム</FooterLink>
           </Link>
-          <Link href="/champions" passHref>
+          <Link href="/champions">
             <FooterLink>チャンピオン</FooterLink>
           </Link>
-          <Link href="/leaderboard" passHref>
+          <Link href="/leaderboard">
             <FooterLink>ランキング</FooterLink>
           </Link>
-          <Link href="/meta" passHref>
+          <Link href="/meta">
             <FooterLink>メタ分析</FooterLink>
           </Link>
-          <Link href="/ai-analysis" passHref>
+          <Link href="/ai-analysis">
             <FooterLink>AI分析</FooterLink>
           </Link>
         </FooterSection>

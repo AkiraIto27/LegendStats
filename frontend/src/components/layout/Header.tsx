@@ -48,10 +48,10 @@ const Navigation = styled.nav`
   }
 `;
 
-const NavLink = styled.a<{ active?: boolean }>`
-  color: ${props => props.active ? '#00bcd4' : '#ffffff'};
+const NavLink = styled.a<{ $active?: boolean }>`
+  color: ${props => props.$active ? '#00bcd4' : '#ffffff'};
   text-decoration: none;
-  font-weight: ${props => props.active ? '600' : '400'};
+  font-weight: ${props => props.$active ? '600' : '400'};
   transition: color 0.2s;
 
   &:hover {
@@ -77,35 +77,35 @@ const Header: React.FC = () => {
     <HeaderContainer>
       <HeaderContent>
         <Logo>
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <a>
               <span>LOL Stats Hub</span>
             </a>
           </Link>
         </Logo>
-        
+
         <SearchContainer>
           <SearchBar />
         </SearchContainer>
 
         <Navigation>
-          <Link href="/champions" passHref>
-            <NavLink active={router.pathname.startsWith('/champions')}>
+          <Link href="/champions" legacyBehavior>
+            <NavLink $active={router.pathname.startsWith('/champions')}>
               チャンピオン
             </NavLink>
           </Link>
-          <Link href="/leaderboard" passHref>
-            <NavLink active={router.pathname.startsWith('/leaderboard')}>
+          <Link href="/leaderboard" legacyBehavior>
+            <NavLink $active={router.pathname.startsWith('/leaderboard')}>
               ランキング
             </NavLink>
           </Link>
-          <Link href="/meta" passHref>
-            <NavLink active={router.pathname.startsWith('/meta')}>
+          <Link href="/meta" legacyBehavior>
+            <NavLink $active={router.pathname.startsWith('/meta')}>
               メタ分析
             </NavLink>
           </Link>
-          <Link href="/ai-analysis" passHref>
-            <NavLink active={router.pathname.startsWith('/ai-analysis')}>
+          <Link href="/ai-analysis" legacyBehavior>
+            <NavLink $active={router.pathname.startsWith('/ai-analysis')}>
               AI分析
             </NavLink>
           </Link>
